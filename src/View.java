@@ -31,6 +31,7 @@ public class View implements ActionListener{
 		
 		window.setTitle("piedra, papel o tijera");
 		window.setSize(260, 300);
+		window.setResizable(false);
 		window.setLocationRelativeTo(null);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setVisible(true);
