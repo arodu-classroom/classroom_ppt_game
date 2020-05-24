@@ -35,21 +35,4 @@ public class Model {
 		return r.nextInt(3) + 1;
 	}
 	
-	public boolean isWinner(int player, int opponent){
-		if(player == Controller.PAPER && opponent == Controller.STONE) {
-			return true;
-		}
-		
-		if(player == Controller.STONE && opponent == Controller.SCISSORS) {
-			return true;
-		}
-		
-		if(player == Controller.SCISSORS && opponent == Controller.PAPER) {
-			return true;
-		}
-		
-		return false;
-	}
-	
-	
 }

@@ -22,7 +22,7 @@ public class Controller {
 		if(playerSignal == opponentSignal) {
 			model.setTied();
 			view.updateStatus("Sin ganador");
-		}else if(model.isWinner(playerSignal, opponentSignal)) {
+		}else if(this.isWinner(playerSignal, opponentSignal)) {
 			model.setWon();
 			view.updateStatus("Ganaste");
 		}else {
@@ -30,6 +30,22 @@ public class Controller {
 			view.updateStatus("Perdiste");
 		}
 		
+	}
+	
+	protected boolean isWinner(int player, int opponent){
+		if(player == Controller.PAPER && opponent == Controller.STONE) {
+			return true;
+		}
+		
+		if(player == Controller.STONE && opponent == Controller.SCISSORS) {
+			return true;
+		}
+		
+		if(player == Controller.SCISSORS && opponent == Controller.PAPER) {
+			return true;
+		}
+		
+		return false;
 	}
 	
 	public String score() {
